@@ -1,0 +1,18 @@
+security:
+  oauth2:
+    client:
+      clientId: "287629510533.612276990530"
+      clientSecret: ${CLIENT_SECRET}
+      accessTokenUri: https://slack.com/api/oauth.access
+      userAuthorizationUri: https://slack.com/oauth/authorize
+      tokenName: token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+      scope: identity.basic
+    resource:
+      userInfoUri: https://slack.com/api/users.identity
+      tokenType: Bearer
+      preferTokenInfo: false
+    sso:
+      # this is the spring-boot default :
+      login-path: /login
